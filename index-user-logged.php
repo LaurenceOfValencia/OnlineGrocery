@@ -1,13 +1,7 @@
-
-<?php
+﻿<?php
   session_start();
   include("connection.php");
-
-  #if(isset($_SESSION['user']) && !empty($_SESSION['user'])) {
-  #   echo $_SESSION['user'];
-  #}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,25 +91,11 @@
 
         <div class="video-overlay header-text">
             <div class="caption">
-                <?php
-                echo "<h6>Welcome ". $_SESSION['user'] ."!</h6>";
-                ?>
-
+                <h6>Welcome!</h6>
                 <h2>Best <em>Online Grocery Store</em> in town</h2>
-                <?php
-                if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
-                  echo "<div class=\"main-button\">";
-                  echo    "<a href=\"products.php\"> Check our products!</a>";
-                  echo "</div>";
-                  echo "<br>";
-                }else {
-                  echo "<div class=\"main-button\">";
-                  echo    "<a href=\"login.php\">Login</a>";
-                  echo "</div>";
-                  echo "<br>";
-                  echo "<p>Not registered?</p> <a href=\"1\">Create Account</a>";
-                }
-                ?>
+                <div class="main-button text-center">
+                    <a href="products.php">View Products</a>
+                </div>
             </div>
         </div>
     </div>
